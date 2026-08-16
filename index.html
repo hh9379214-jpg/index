@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="شركة العملاق لخدمات التنظيف ومكافحة الحشرات في الإمارات" />
+  <title>شركة العملاق | تنظيف ومكافحة حشرات في الإمارات</title>
+  <style>
+    :root {
+      --ink: #152a35;
+      --muted: #64777d;
+      --cream: #fffdf8;
+      --paper: #fffaf0;
+      --teal: #087f80;
+      --teal-deep: #075b63;
+      --mint: #dff5ea;
+      --orange: #f28b36;
+      --yellow: #ffd675;
+      --line: rgba(21, 42, 53, .11);
+      --shadow: 0 26px 70px rgba(24, 63, 67, .18);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 7% 5%, rgba(255, 214, 117, .48), transparent 25rem),
+        radial-gradient(circle at 98% 75%, rgba(121, 217, 178, .25), transparent 23rem),
+        #edf6f1;
+      font-family: Tahoma, Arial, sans-serif;
+      line-height: 1.7;
+    }
+
+    a { color: inherit; }
+
+    .page {
+      width: min(100% - 28px, 1060px);
+      margin: 28px auto;
+      overflow: hidden;
+      background: var(--cream);
+      border: 1px solid rgba(255, 255, 255, .9);
+      border-radius: 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero {
+      position: relative;
+      min-height: 455px;
+      overflow: hidden;
+      padding: 34px clamp(22px, 5vw, 68px) 50px;
+      background:
+        linear-gradient(132deg, rgba(6, 96, 99, .96), rgba(9, 127, 128, .9)),
+        url("https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1600&q=85") center/cover;
+      color: white;
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero::before {
+      width: 360px;
+      height: 360px;
+      left: -135px;
+      bottom: -190px;
+      border: 1px solid rgba(255,255,255,.2);
+      box-shadow: 0 0 0 32px rgba(255,255,255,.05), 0 0 0 64px rgba(255,255,255,.04);
+    }
+
+    .hero::after {
+      width: 230px;
+      height: 230px;
+      right: -90px;
+      top: -110px;
+      background: rgba(255, 214, 117, .14);
+    }
+
+    .topbar, .hero-content, .hero-bottom { position: relative; z-index: 1; }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 58px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: .1px;
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 39px;
+      height: 39px;
+      place-items: center;
+      color: var(--teal-deep);
+      background: var(--yellow);
+      border-radius: 13px 13px 13px 3px;
+      font-size: 21px;
+      transform: rotate(-7deg);
+    }
+
+    .location {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 13px;
+      color: #fff6d7;
+      border: 1px solid rgba(255,255,255,.28);
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .location span { color: var(--yellow); font-size: 16px; }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 12px;
+      color: var(--yellow);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 26px;
+      height: 2px;
+      background: var(--yellow);
+    }
+
+    h1 {
+      max-width: 670px;
+      margin: 0;
+      font-size: clamp(33px, 6vw, 62px);
+      line-height: 1.14;
+      letter-spacing: -1.7px;
+    }
+
+    h1 strong { color: var(--yellow); }
+
+    .hero-text {
+      max-width: 570px;
+      margin: 19px 0 0;
+      color: rgba(255,255,255,.83);
+      font-size: clamp(15px, 2vw, 18px);
+    }
+
+    .hero-bottom {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 22px;
+      margin-top: 34px;
+    }
+
+    .phone-label {
+      display: block;
+      margin-bottom: 2px;
+      color: rgba(255,255,255,.7);
+      font-size: 12px;
+    }
+
+    .phone-number {
+      direction: ltr;
+      display: inline-block;
+      color: white;
+      font-size: clamp(22px, 4vw, 31px);
+      font-weight: 900;
+      letter-spacing: 1px;
+      text-decoration: none;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .button {
+      display: inline-flex;
+      min-height: 47px;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 19px;
+      border-radius: 14px;
+      font-size: 14px;
+      font-weight: 800;
+      text-decoration: none;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+
+    .button:hover, .button:focus-visible {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 22px rgba(0,0,0,.15);
+    }
+
+    .button:focus-visible, a:focus-visible {
+      outline: 3px solid var(--orange);
+      outline-offset: 3px;
+    }
+
+    .button-primary { color: var(--teal-deep); background: var(--yellow); }
+    .button-whatsapp { color: white; background: #1eaf72; }
+
+    main { padding: 42px clamp(20px, 5vw, 68px) 0; }
+
+    .section-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 21px;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      font-size: clamp(24px, 3.5vw, 34px);
+      line-height: 1.2;
+    }
+
+    .section-heading p {
+      max-width: 310px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 11px;
+      margin-bottom: 45px;
+    }
+
+    .service {
+      position: relative;
+      min-height: 100px;
+      padding: 17px 15px;
+      overflow: hidden;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 17px;
+      transition: transform .2s ease, border-color .2s ease;
+    }
+
+    .service:hover { transform: translateY(-4px); border-color: rgba(8,127,128,.38); }
+
+    .service::after {
+      content: "";
+      position: absolute;
+      width: 54px;
+      height: 54px;
+      left: -19px;
+      bottom: -22px;
+      border: 1px solid rgba(8,127,128,.15);
+      border-radius: 50%;
+    }
+
+    .service-icon {
+      display: grid;
+      width: 33px;
+      height: 33px;
+      margin-bottom: 9px;
+      place-items: center;
+      color: var(--teal-deep);
+      background: var(--mint);
+      border-radius: 10px;
+      font-size: 17px;
+    }
+
+    .service h3 {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-bottom: 43px;
+    }
+
+    .benefit {
+      padding: 21px;
+      background: var(--teal-deep);
+      border-radius: 19px;
+      color: white;
+    }
+
+    .benefit:nth-child(2) { background: #f4a54e; color: #4f2d10; }
+    .benefit:nth-child(3) { background: #dff5ea; color: var(--teal-deep); }
+
+    .benefit strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 17px;
+    }
+
+    .benefit p {
+      margin: 0;
+      font-size: 13px;
+      line-height: 1.7;
+      opacity: .82;
+    }
+
+    .cta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+      padding: 23px 26px;
+      color: white;
+      background:
+        linear-gradient(105deg, rgba(5, 88, 95, .95), rgba(8, 127, 128, .88)),
+        url("https://images.unsplash.com/photo-1585421514738-01798e348b17?auto=format&fit=crop&w=1200&q=80") center/cover;
+      border-radius: 21px;
+    }
+
+    .cta h2 {
+      margin: 0 0 4px;
+      font-size: clamp(20px, 3vw, 27px);
+    }
+
+    .cta p { margin: 0; color: rgba(255,255,255,.76); font-size: 13px; }
+
+    footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px 20px;
+      margin-top: 36px;
+      padding: 23px 0 27px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    footer p { margin: 0; }
+
+    .designer {
+      color: var(--teal-deep);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .designer:hover { color: var(--orange); }
+
+    @media (max-width: 730px) {
+      .page { width: min(100% - 16px, 620px); margin: 8px auto; border-radius: 22px; }
+      .hero { min-height: 0; padding: 22px 20px 31px; }
+      .topbar { align-items: flex-start; margin-bottom: 47px; }
+      .brand { font-size: 14px; }
+      .location { padding: 5px 9px; font-size: 11px; }
+      .hero-bottom, .cta { align-items: stretch; flex-direction: column; }
+      .hero-bottom { margin-top: 28px; }
+      .actions { width: 100%; }
+      .button { flex: 1; }
+      main { padding: 31px 20px 0; }
+      .section-heading { align-items: start; flex-direction: column; }
+      .section-heading p { max-width: none; }
+      .services { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; margin-bottom: 33px; }
+      .service { min-height: 94px; padding: 13px; }
+      .benefits { grid-template-columns: 1fr; gap: 10px; margin-bottom: 31px; }
+      .benefit { padding: 17px; }
+      .cta { padding: 20px; }
+      footer { align-items: flex-start; flex-direction: column; margin-top: 28px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="topbar">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">✦</span>
+          <span>شركة العملاق للخدمات</span>
+        </div>
+        <div class="location"><span aria-hidden="true">⌖</span> الإمارات العربية المتحدة</div>
+      </div>
+
+      <div class="hero-content">
+        <p class="eyebrow">نظافة أعمق • راحة أكبر</p>
+        <h1>بيتك يستحق عناية <strong>تليق به</strong></h1>
+        <p class="hero-text">حلول متكاملة للتنظيف ومكافحة الحشرات والطيور، بأيدي فريق يهتم بالتفاصيل ويترك المكان أنظف وأهدأ.</p>
+      </div>
+
+      <div class="hero-bottom">
+        <div>
+          <span class="phone-label">للحجز والاستفسار</span>
+          <a class="phone-number" href="tel:0508090427" dir="ltr">050 809 0427</a>
+        </div>
+        <div class="actions">
+          <a class="button button-primary" href="tel:0508090427"><span aria-hidden="true">☎</span> اتصل الآن</a>
+          <a class="button button-whatsapp" href="https://wa.me/201029095046" target="_blank" rel="noopener"><span aria-hidden="true">◉</span> واتساب</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section aria-labelledby="services-title">
+        <div class="section-heading">
+          <h2 id="services-title">خدماتنا في مكان واحد</h2>
+          <p>من التنظيف اليومي إلى أصعب مشاكل الحشرات والطيور — نساعدك في استعادة راحة المكان.</p>
+        </div>
+
+        <div class="services">
+          <article class="service"><div class="service-icon" aria-hidden="true">⌁</div><h3>تسليك المجاري</h3></article>
+          <article class="service"><div class="service-icon" aria-hidden="true">✧</div><h3>مكافحة الحشرات</h3></article>
+          <article class="service"><div class="service-icon" aria-hidden="true">♧</div><h3>مكافحة الطيور والحمام</h3></article>
+          <article class="service"><div class="service-icon" aria-hidden="true">↗</div><h3>تركيب طارد الحمام</h3></article>
+          <article class="service"><div class="service-icon" aria-hidden="true">◌</div><h3>مكافحة الرمة</h3></article>
+          <article class="service"><div class="service-icon" aria-hidden="true">⊹</div><h3>رش الصراصير والنمل</h3></article>
+          <article class="service"><div class="service-icon" aria-hidden="true">◒</div><h3>مكافحة البرص</h3></article>
+          <article class="service"><div class="service-icon" aria-hidden="true">⌂</div><h3>تنظيف فلل وبيوت</h3></article>
+          <article class="service"><div class="service-icon" aria-hidden="true">▰</div><h3>تنظيف كنب ومجالس</h3></article>
+          <article class="service"><div class="service-icon" aria-hidden="true">▤</div><h3>تنظيف سجاد</h3></article>
+          <article class="service"><div class="service-icon" aria-hidden="true">♢</div><h3>تنظيف خزانات المياه</h3></article>
+          <article class="service"><div class="service-icon" aria-hidden="true">◇</div><h3>جلي وتلميع الرخام</h3></article>
+        </div>
+      </section>
+
+      <section aria-labelledby="benefits-title">
+        <div class="section-heading">
+          <h2 id="benefits-title">لماذا العملاق؟</h2>
+          <p>خدمة تهتم بنظافة المكان وبراحة العميل من أول تواصل.</p>
+        </div>
+        <div class="benefits">
+          <article class="benefit"><strong>حلول متكاملة</strong><p>خدمات تنظيف ومكافحة متنوعة للبيوت والفلل والمجالس.</p></article>
+          <article class="benefit"><strong>اهتمام بالتفاصيل</strong><p>نصل إلى الأماكن التي يصعب الوصول إليها ونترك فرقًا واضحًا.</p></article>
+          <article class="benefit"><strong>خدمة مريحة</strong><p>تواصل سريع وسهل عبر الاتصال أو الواتساب لتحديد احتياجك.</p></article>
+        </div>
+      </section>
+
+      <section class="cta" aria-label="تواصل معنا">
+        <div>
+          <h2>جاهز لمكان أنظف؟</h2>
+          <p>تواصل معنا الآن ودع العناية بالمكان علينا.</p>
+        </div>
+        <a class="button button-primary" href="https://wa.me/201029095046" target="_blank" rel="noopener">ابدأ المحادثة <span aria-hidden="true">←</span></a>
+      </section>
+
+      <footer>
+        <p>© <span id="year">2026</span> شركة العملاق — جميع الحقوق محفوظة</p>
+        <p>تم التصميم بواسطة <a class="designer" href="https://wa.me/201029095046" target="_blank" rel="noopener">م. نجوى إبراهيم</a></p>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
